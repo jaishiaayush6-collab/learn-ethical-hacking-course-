@@ -1,99 +1,165 @@
+
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Linux | Aayush Cyber Security</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#07111f;color:white;font-family:Arial;line-height:1.8}
-header,footer{background:#10243a;text-align:center;padding:25px}
-h1,h2{color:#00ff99}
-nav{text-align:center;background:#0d2035;padding:15px}
-nav a{color:white;text-decoration:none;margin:8px}
-main{max-width:950px;margin:auto;padding:25px}
-section{background:#10243a;padding:20px;margin:18px 0;border-radius:10px}
-code{background:#02080f;color:#00ff99;padding:8px;display:block;margin:10px 0;border-radius:5px}
-button{padding:10px;cursor:pointer}
-.light{background:#eee;color:#111}
-.light section{background:white}
-.light nav a{color:#111}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux Academy</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<h1>🐧 LINUX LEARNING</h1>
-<p>Learn Linux Operating System</p>
-</header>
 
-<nav>
+<header class="header">
+<a href="index.html" class="logo">CYBER<span>ACADEMY</span></a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="navigation">
 <a href="index.html">Home</a>
 <a href="courses.html">Courses</a>
 <a href="networking.html">Networking</a>
-<a href="linux.html">Linux</a>
-<a href="web-security.html">Web Security</a>
+<a class="active" href="linux.html">Linux</a>
+<a href="web-security.html">Security</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
+</header>
 
-<main>
-<button onclick="document.body.classList.toggle('light')">Change Theme</button>
-
-<section>
-<h2>1. Linux भनेको के हो?</h2>
-<p>Linux एउटा Open Source Operating System हो। यो Server, Desktop, Embedded Systems तथा अन्य धेरै क्षेत्रमा प्रयोग गरिन्छ।</p>
+<section class="page-hero">
+<span class="tag">OPEN SOURCE TECHNOLOGY</span>
+<h1>Welcome to <span>Linux Academy</span></h1>
+<p>Explore Linux operating systems and command-line fundamentals.</p>
 </section>
 
-<section>
-<h2>2. Linux Distributions</h2>
-<p>Ubuntu, Debian, Fedora, Linux Mint, Kali Linux र Arch Linux लोकप्रिय Linux Distributions हुन्।</p>
-</section>
+<main class="section">
 
-<section>
-<h2>3. Basic Linux Commands</h2>
+<div class="content-panel">
+<h2>01. What is Linux?</h2>
+<p>Linux is an open-source operating system kernel.
+Linux-based operating systems are widely used in computers,
+servers, embedded devices and cloud infrastructure.</p>
+</div>
 
-<p>हालको Directory हेर्न:</p>
-<code>pwd</code>
+<div class="content-panel">
+<h2>02. Linux Distributions</h2>
+<ul>
+<li>Ubuntu</li>
+<li>Debian</li>
+<li>Fedora</li>
+<li>Linux Mint</li>
+<li>openSUSE</li>
+<li>Kali Linux</li>
+</ul>
+<p>Each distribution provides different tools and experiences.</p>
+</div>
 
-<p>फाइल तथा Folder हेर्न:</p>
-<code>ls</code>
+<div class="content-panel">
+<h2>03. Basic Linux Commands</h2>
+<p>Display current directory:</p>
+<pre>pwd</pre>
+<p>List directory contents:</p>
+<pre>ls -la</pre>
+<p>Change directory:</p>
+<pre>cd Documents</pre>
+<p>Create a folder:</p>
+<pre>mkdir learning</pre>
+<p>Display current username:</p>
+<pre>whoami</pre>
+<p>Display system information:</p>
+<pre>uname -a</pre>
+<p>Display available disk space:</p>
+<pre>df -h</pre>
+<p>Display memory information:</p>
+<pre>free -h</pre>
+</div>
 
-<p>Directory परिवर्तन गर्न:</p>
-<code>cd Documents</code>
+<div class="content-panel">
+<h2>04. Linux File System</h2>
+<ul>
+<li>/home – User directories.</li>
+<li>/etc – Configuration files.</li>
+<li>/var – Variable application data.</li>
+<li>/tmp – Temporary files.</li>
+<li>/usr – User applications and resources.</li>
+<li>/bin – Essential user commands.</li>
+<li>/boot – Boot-related files.</li>
+<li>/dev – Device files.</li>
+</ul>
+</div>
 
-<p>Folder बनाउन:</p>
-<code>mkdir myfolder</code>
+<div class="content-panel">
+<h2>05. File Permissions</h2>
+<p>Linux uses permissions to control access to files
+and directories.</p>
+<pre>ls -l</pre>
+<p>Permissions include:</p>
+<ul>
+<li>r – Read</li>
+<li>w – Write</li>
+<li>x – Execute</li>
+</ul>
+<p>Permission groups include owner, group and others.</p>
+</div>
 
-<p>फाइल बनाउन:</p>
-<code>touch example.txt</code>
+<div class="content-panel">
+<h2>06. Package Management</h2>
+<p>On Debian and Ubuntu systems, APT is commonly used
+to manage software packages.</p>
+<pre>apt search package-name</pre>
+<pre>apt show package-name</pre>
+<p>Use package installation and system update commands
+only with appropriate authorization.</p>
+</div>
 
-<p>फाइल पढ्न:</p>
-<code>cat example.txt</code>
+<div class="content-panel">
+<h2>07. Linux Learning Roadmap</h2>
+<ol>
+<li>Understand Linux distributions.</li>
+<li>Learn the terminal.</li>
+<li>Explore files and directories.</li>
+<li>Understand users and permissions.</li>
+<li>Study processes and services.</li>
+<li>Learn networking basics.</li>
+<li>Practice system administration.</li>
+</ol>
+</div>
 
-<p>Terminal सफा गर्न:</p>
-<code>clear</code>
+<div class="content-panel">
+<h2>Linux Knowledge Quiz</h2>
 
-<p>हालको प्रयोगकर्ता हेर्न:</p>
-<code>whoami</code>
-</section>
+<div class="quiz-question">
+<h3>1. Which command displays the current directory?</h3>
+<label><input type="radio" name="lq1" value="1"> pwd</label>
+<label><input type="radio" name="lq1" value="0"> cd</label>
+<label><input type="radio" name="lq1" value="0"> mkdir</label>
+</div>
 
-<section>
-<h2>4. Linux File System</h2>
-<p>/home - User Files</p>
-<p>/etc - Configuration Files</p>
-<p>/var - Variable Data</p>
-<p>/tmp - Temporary Files</p>
-<p>/bin - Essential Commands</p>
-</section>
+<div class="quiz-question">
+<h3>2. Which command lists files?</h3>
+<label><input type="radio" name="lq2" value="0"> pwd</label>
+<label><input type="radio" name="lq2" value="1"> ls</label>
+<label><input type="radio" name="lq2" value="0"> whoami</label>
+</div>
 
-<section>
-<h2>5. Linux Security</h2>
-<p>Linux मा User Permissions, Updates, Firewall र सुरक्षित Password प्रयोग गर्नु महत्त्वपूर्ण हुन्छ।</p>
-</section>
+<div class="quiz-question">
+<h3>3. What does r mean in file permissions?</h3>
+<label><input type="radio" name="lq3" value="1"> Read</label>
+<label><input type="radio" name="lq3" value="0"> Remove</label>
+<label><input type="radio" name="lq3" value="0"> Rename</label>
+</div>
+
+<button class="btn" onclick="checkQuiz(['lq1','lq2','lq3'],3)">
+Check Answers
+</button>
+<p id="quizResult"></p>
+</div>
+
 </main>
 
-<footer>
-<p>© 2026 Aayush Cyber Security</p>
-<p>Developed by Aayush Jaishi</p>
+<footer class="footer">
+<h3>CYBER ACADEMY</h3>
+<p>Learn Linux. Understand Technology.</p>
+<p>© 2026 Cyber Academy</p>
 </footer>
+
 </body>
 </html>
-
