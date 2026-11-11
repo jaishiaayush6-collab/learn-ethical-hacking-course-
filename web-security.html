@@ -1,81 +1,146 @@
+
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Web Security | Aayush Cyber Security</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#07111f;color:white;font-family:Arial;line-height:1.8}
-header,footer{background:#10243a;text-align:center;padding:25px}
-h1,h2{color:#00ff99}
-nav{text-align:center;background:#0d2035;padding:15px}
-nav a{color:white;text-decoration:none;margin:8px}
-main{max-width:950px;margin:auto;padding:25px}
-section{background:#10243a;padding:20px;margin:18px 0;border-radius:10px}
-button{padding:10px;cursor:pointer}
-.light{background:#eee;color:#111}
-.light section{background:white}
-.light nav a{color:#111}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Security Academy</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<h1>🛡 WEB SECURITY</h1>
-<p>Learn Website Protection and Cyber Safety</p>
-</header>
 
-<nav>
+<header class="header">
+<a href="index.html" class="logo">CYBER<span>ACADEMY</span></a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="navigation">
 <a href="index.html">Home</a>
 <a href="courses.html">Courses</a>
 <a href="networking.html">Networking</a>
 <a href="linux.html">Linux</a>
-<a href="web-security.html">Web Security</a>
+<a class="active" href="web-security.html">Security</a>
 <a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
+</header>
 
-<main>
-<button onclick="document.body.classList.toggle('light')">Change Theme</button>
-
-<section>
-<h2>1. Web Security के हो?</h2>
-<p>Web Security भनेको Website, Web Application र त्यसमा रहेका डाटालाई अनधिकृत पहुँच तथा डिजिटल जोखिमबाट सुरक्षित राख्ने प्रक्रिया हो।</p>
+<section class="page-hero">
+<span class="tag">DIGITAL DEFENSE</span>
+<h1>Cyber <span>Security</span></h1>
+<p>Understand digital threats and learn how to protect information.</p>
 </section>
 
-<section>
-<h2>2. HTTPS Security</h2>
-<p>HTTPS ले Browser र Server बीचको सञ्चारलाई TLS मार्फत सुरक्षित बनाउँछ। यसले डाटाको गोपनीयता र अखण्डता कायम राख्न सहयोग गर्छ।</p>
-</section>
+<main class="section">
 
-<section>
-<h2>3. Common Web Security Risks</h2>
-<p>• SQL Injection</p>
-<p>• Cross-Site Scripting (XSS)</p>
-<p>• Cross-Site Request Forgery (CSRF)</p>
-<p>• Broken Authentication</p>
-<p>• Security Misconfiguration</p>
-<p>यी जोखिमहरू बुझेर आफ्नो Website सुरक्षित बनाउन सिक्नुहोस्।</p>
-</section>
+<div class="content-panel">
+<h2>01. What is Cyber Security?</h2>
+<p>Cybersecurity is the practice of protecting computers,
+networks, applications and information from unauthorized
+access, disruption and misuse.</p>
+</div>
 
-<section>
-<h2>4. Password Security</h2>
-<p>लामो र फरक Password प्रयोग गर्नुहोस्। Multi-Factor Authentication (MFA) सक्षम गर्नुहोस्। Password अरूसँग साझा नगर्नुहोस्।</p>
-</section>
+<div class="content-panel">
+<h2>02. The CIA Triad</h2>
+<h3>Confidentiality</h3>
+<p>Information should only be accessible to authorized people.</p>
+<h3>Integrity</h3>
+<p>Information should remain accurate and trustworthy.</p>
+<h3>Availability</h3>
+<p>Systems and information should be accessible when needed.</p>
+</div>
 
-<section>
-<h2>5. Website Protection</h2>
-<p>Website Updates, HTTPS, Secure Authentication, Input Validation र नियमित Backup प्रयोग गर्नुहोस्।</p>
-</section>
+<div class="content-panel">
+<h2>03. Common Cyber Threats</h2>
+<h3>Phishing</h3>
+<p>Fraudulent messages designed to trick people into
+revealing information.</p>
+<h3>Malware</h3>
+<p>Software designed to harm, disrupt or gain unauthorized access.</p>
+<h3>Ransomware</h3>
+<p>Malicious software that can deny access to data until
+a demanded payment is made.</p>
+<h3>Social Engineering</h3>
+<p>Manipulation that attempts to make people reveal
+confidential information.</p>
+<h3>Weak Passwords</h3>
+<p>Poor password practices can expose user accounts.</p>
+</div>
 
-<section>
-<h2>6. Ethical Hacking</h2>
-<p>Ethical Hacking भनेको स्पष्ट अनुमति लिएर प्रणालीको सुरक्षा कमजोरी पहिचान गर्ने प्रक्रिया हो। अभ्यास सधैँ आफ्नै Lab वा अनुमति प्राप्त वातावरणमा मात्र गर्नुहोस्।</p>
-</section>
+<div class="content-panel">
+<h2>04. Website Security</h2>
+<ul>
+<li>Use HTTPS with valid TLS certificates.</li>
+<li>Validate and sanitize user input.</li>
+<li>Use secure authentication.</li>
+<li>Protect sensitive information.</li>
+<li>Keep frameworks and libraries updated.</li>
+<li>Use appropriate security headers.</li>
+<li>Back up important information.</li>
+</ul>
+</div>
+
+<div class="content-panel">
+<h2>05. Password Safety</h2>
+<ul>
+<li>Use long and unique passwords.</li>
+<li>Never reuse passwords across important accounts.</li>
+<li>Enable multi-factor authentication.</li>
+<li>Use a trusted password manager.</li>
+<li>Never share verification codes.</li>
+</ul>
+</div>
+
+<div class="content-panel">
+<h2>06. Ethical Cybersecurity</h2>
+<p>Ethical security learning must follow permission,
+law and responsible disclosure.</p>
+<ul>
+<li>Practice only in authorized labs.</li>
+<li>Never access other people's accounts.</li>
+<li>Do not test public websites without permission.</li>
+<li>Report vulnerabilities responsibly.</li>
+<li>Respect privacy and personal data.</li>
+</ul>
+</div>
+
+<div class="content-panel">
+<h2>07. Cyber Security Quiz</h2>
+
+<div class="quiz-question">
+<h3>1. What does HTTPS help provide?</h3>
+<label><input type="radio" name="sq1" value="1"> Encrypted web communication</label>
+<label><input type="radio" name="sq1" value="0"> Faster keyboard typing</label>
+<label><input type="radio" name="sq1" value="0"> More computer storage</label>
+</div>
+
+<div class="quiz-question">
+<h3>2. What is phishing?</h3>
+<label><input type="radio" name="sq2" value="0"> A programming language</label>
+<label><input type="radio" name="sq2" value="1"> A fraudulent attempt to trick users</label>
+<label><input type="radio" name="sq2" value="0"> A computer processor</label>
+</div>
+
+<div class="quiz-question">
+<h3>3. What is MFA?</h3>
+<label><input type="radio" name="sq3" value="1"> Multi-Factor Authentication</label>
+<label><input type="radio" name="sq3" value="0"> Main File Application</label>
+<label><input type="radio" name="sq3" value="0"> Manual Folder Access</label>
+</div>
+
+<button class="btn" onclick="checkQuiz(['sq1','sq2','sq3'],3)">
+Submit Answers
+</button>
+<p id="quizResult"></p>
+</div>
+
 </main>
 
-<footer>
-<p>© 2026 Aayush Cyber Security</p>
-<p>Developed by Aayush Jaishi</p>
+<footer class="footer">
+<h3>CYBER ACADEMY</h3>
+<p>Learn Security. Protect Knowledge.</p>
+<p>© 2026 Cyber Academy</p>
 </footer>
+
 </body>
 </html>
+
