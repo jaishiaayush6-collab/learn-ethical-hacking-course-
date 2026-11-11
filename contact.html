@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Aayush Cyber Security</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#07111f;color:white;font-family:Arial;line-height:1.8}
+header,footer{background:#10243a;text-align:center;padding:25px}
+h1,h2{color:#00ff99}
+nav{text-align:center;background:#0d2035;padding:15px}
+nav a{color:white;text-decoration:none;margin:8px}
+main{max-width:700px;margin:auto;padding:30px 15px}
+form{background:#10243a;padding:25px;border-radius:12px}
+input,textarea{width:100%;padding:13px;margin:10px 0;border:0;border-radius:5px}
+button{background:#00cc88;color:#001;padding:12px 25px;border:0;border-radius:5px;cursor:pointer}
+.contact{text-align:center;margin:25px 0}
+.light{background:#eee;color:#111}
+.light form{background:white}
+.light nav a{color:#111}
+</style>
+</head>
+<body>
+<header>
+<h1>CONTACT US</h1>
+<p>We Would Love To Hear From You</p>
+</header>
 
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="networking.html">Networking</a>
+<a href="linux.html">Linux</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<main>
+<button onclick="document.body.classList.toggle('light')">Change Theme</button>
+
+<div class="contact">
+<h2>Get In Touch</h2>
+<p>कुनै प्रश्न, सुझाव वा जानकारीका लागि हामीलाई सम्पर्क गर्नुहोस्।</p>
+</div>
+
+<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+<label>Your Name</label>
+<input type="text" name="Name" placeholder="Enter your name" required>
+
+<label>Your Email</label>
+<input type="email" name="Email" placeholder="Enter your email" required>
+
+<label>Subject</label>
+<input type="text" name="Subject" placeholder="Enter subject">
+
+<label>Your Message</label>
+<textarea name="Message" rows="6" placeholder="Write your message..." required></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+<div class="contact">
+<h2>Thank You!</h2>
+<p>© Aayush Cyber Security</p>
+<p>Developed by Aayush Jaishi</p>
+</div>
+</main>
+
+<footer>
+<p>Learn • Practice • Protect</p>
+</footer>
+</body>
+</html>
