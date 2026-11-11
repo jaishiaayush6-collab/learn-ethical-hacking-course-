@@ -1,93 +1,141 @@
+
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Courses | Aayush Cyber Security</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#07111f;color:white;transition:.3s}
-header{background:#0d2035;padding:20px;text-align:center}
-header h1{color:#00ff99}
-nav{background:#102b43;padding:15px;text-align:center}
-nav a{color:white;text-decoration:none;margin:10px;display:inline-block}
-.container{max-width:1100px;margin:auto;padding:30px 15px}
-h2{text-align:center;color:#00ff99;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:#10243a;padding:25px;border-radius:12px;border:1px solid #00ff99}
-.card h3{color:#00ff99;margin-bottom:12px}
-.card p{line-height:1.7}
-.card a{display:inline-block;margin-top:15px;background:#00cc88;color:#001;padding:10px 18px;text-decoration:none;border-radius:5px}
-button{padding:10px 15px;border:0;border-radius:5px;cursor:pointer}
-footer{text-align:center;padding:25px;background:#0d2035;margin-top:30px}
-.light{background:#f1f5f9;color:#172033}
-.light header,.light nav,.light footer{background:#dce7f2}
-.light nav a{color:#172033}
-.light .card{background:white;color:#172033}
-</style>
+<title>Courses | Cyber Academy</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<h1>🛡 AAYUSH CYBER SECURITY</h1>
-<p>Learn • Practice • Protect</p>
-</header>
 
-<nav>
+<header class="header">
+<a href="index.html" class="logo">CYBER<span>ACADEMY</span></a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="navigation">
 <a href="index.html">Home</a>
-<a href="courses.html">Courses</a>
+<a class="active" href="courses.html">Courses</a>
 <a href="networking.html">Networking</a>
 <a href="linux.html">Linux</a>
-<a href="web-security.html">Web Security</a>
+<a href="web-security.html">Security</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+<button class="nav-button" onclick="openLogin()">Login</button>
 </nav>
+</header>
 
-<div class="container">
-<button onclick="document.body.classList.toggle('light')">🌙 / ☀️ Theme</button>
-<h2>Our Cyber Security Courses</h2>
+<section class="page-hero">
+<span class="tag">KNOWLEDGE STARTS HERE</span>
+<h1>Explore Our <span>Courses</span></h1>
+<p>Discover technology through structured learning.</p>
+</section>
 
-<div class="grid">
-<div class="card">
-<h3>01. Computer Fundamentals</h3>
-<p>Computer basics, hardware, software, operating systems र digital technology सिक्नुहोस्।</p>
-<a href="computer.html">Learn More</a>
+<main class="section">
+<div class="search-box">
+<input id="courseSearch" type="search"
+placeholder="Search any course..."
+oninput="searchCourses()">
 </div>
 
-<div class="card">
-<h3>02. Networking</h3>
-<p>IP Address, DNS, TCP/IP, Router, Switch र Network Security को आधारभूत ज्ञान।</p>
-<a href="networking.html">Learn More</a>
+<div class="filter-buttons">
+<button onclick="filterCourses('all')">All</button>
+<button onclick="filterCourses('beginner')">Beginner</button>
+<button onclick="filterCourses('intermediate')">Intermediate</button>
 </div>
 
-<div class="card">
-<h3>03. Linux</h3>
-<p>Linux Operating System, Terminal, File Management र Command Line सिक्नुहोस्।</p>
-<a href="linux.html">Learn More</a>
+<div class="course-grid" id="courseGrid">
+
+<article class="course-card" data-level="beginner">
+<div class="course-icon">💻</div>
+<span class="tag">BEGINNER</span>
+<h3>Computer Fundamentals</h3>
+<p>Learn hardware, software, memory, input and output devices.</p>
+<a href="#computer" class="text-link">View Details →</a>
+</article>
+
+<article class="course-card" data-level="beginner">
+<div class="course-icon">🌐</div>
+<span class="tag">BEGINNER</span>
+<h3>Networking Fundamentals</h3>
+<p>Understand computer networks, IP addresses and protocols.</p>
+<a href="networking.html" class="text-link">View Course →</a>
+</article>
+
+<article class="course-card" data-level="beginner">
+<div class="course-icon">🐧</div>
+<span class="tag">BEGINNER</span>
+<h3>Linux Basics</h3>
+<p>Learn Linux distributions, terminal and file systems.</p>
+<a href="linux.html" class="text-link">View Course →</a>
+</article>
+
+<article class="course-card" data-level="intermediate">
+<div class="course-icon">🛡️</div>
+<span class="tag">INTERMEDIATE</span>
+<h3>Web Security</h3>
+<p>Learn web vulnerabilities and defensive security principles.</p>
+<a href="web-security.html" class="text-link">View Course →</a>
+</article>
+
+<article class="course-card" data-level="beginner">
+<div class="course-icon">🌍</div>
+<span class="tag">BEGINNER</span>
+<h3>Internet Technology</h3>
+<p>Understand browsers, websites, DNS and internet services.</p>
+<a href="#internet" class="text-link">View Details →</a>
+</article>
+
+<article class="course-card" data-level="intermediate">
+<div class="course-icon">🔐</div>
+<span class="tag">INTERMEDIATE</span>
+<h3>Digital Safety</h3>
+<p>Learn privacy, password safety and account protection.</p>
+<a href="web-security.html" class="text-link">View Course →</a>
+</article>
+
 </div>
 
-<div class="card">
-<h3>04. Web Security</h3>
-<p>Website Security, HTTPS, Authentication र सुरक्षित Web Development।</p>
-<a href="web-security.html">Learn More</a>
+<div class="content-panel" id="computer">
+<h2>Computer Fundamentals</h2>
+<p>A computer is an electronic device that accepts input,
+processes data, stores information and produces output.</p>
+<h3>Important Topics</h3>
+<ul>
+<li>Computer hardware and software</li>
+<li>CPU and memory</li>
+<li>Input and output devices</li>
+<li>Operating systems</li>
+<li>Data storage</li>
+</ul>
 </div>
 
-<div class="card">
-<h3>05. Ethical Hacking</h3>
-<p>कानुनी अनुमति लिएर Security Testing र Vulnerability Awareness सिक्नुहोस्।</p>
-<a href="web-security.html">Learn More</a>
+<div class="content-panel" id="internet">
+<h2>Internet Technology</h2>
+<p>The internet is a global network that connects devices
+and allows them to exchange information.</p>
+<h3>Important Topics</h3>
+<ul>
+<li>World Wide Web</li>
+<li>Web browsers</li>
+<li>Domain names</li>
+<li>DNS fundamentals</li>
+<li>HTTP and HTTPS</li>
+</ul>
 </div>
 
-<div class="card">
-<h3>06. Digital Safety</h3>
-<p>Password Safety, Phishing Awareness र Online Privacy सम्बन्धी ज्ञान।</p>
-<a href="web-security.html">Learn More</a>
-</div>
-</div>
+<div class="content-panel">
+<h2>Test Your Knowledge</h2>
+<p>Try our computer fundamentals quiz.</p>
+<a href="networking.html#quiz" class="btn">Open Learning Quiz →</a>
 </div>
 
-<footer>
-<p>© 2026 Aayush Cyber Security</p>
-<p>Developed by Aayush Jaishi</p>
+</main>
+
+<footer class="footer">
+<h3>CYBER ACADEMY</h3>
+<p>Learn. Practice. Improve.</p>
+<p>© 2026 Cyber Academy</p>
 </footer>
 </body>
 </html>
