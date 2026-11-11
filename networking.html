@@ -1,85 +1,161 @@
+
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Networking | Aayush Cyber Security</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#07111f;color:white;font-family:Arial;line-height:1.8}
-header,footer{background:#10243a;text-align:center;padding:25px}
-h1,h2{color:#00ff99}
-nav{text-align:center;background:#0d2035;padding:15px}
-nav a{color:white;text-decoration:none;margin:8px}
-main{max-width:950px;margin:auto;padding:25px}
-section{background:#10243a;padding:20px;margin:18px 0;border-radius:10px}
-button{padding:10px;cursor:pointer}
-.light{background:#eee;color:#111}
-.light section{background:white}
-.light nav a{color:#111}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Networking Academy</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-<header>
-<h1>🌐 COMPUTER NETWORKING</h1>
-<p>Learn Networking From Beginner to Advanced</p>
-</header>
 
-<nav>
+<header class="header">
+<a href="index.html" class="logo">CYBER<span>ACADEMY</span></a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="navigation">
 <a href="index.html">Home</a>
 <a href="courses.html">Courses</a>
-<a href="networking.html">Networking</a>
+<a class="active" href="networking.html">Networking</a>
 <a href="linux.html">Linux</a>
-<a href="web-security.html">Web Security</a>
+<a href="web-security.html">Security</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </nav>
+</header>
 
-<main>
-<button onclick="document.body.classList.toggle('light')">Change Theme</button>
-
-<section>
-<h2>1. Networking भनेको के हो?</h2>
-<p>Networking भनेको दुई वा दुईभन्दा बढी कम्प्युटर तथा डिजिटल उपकरणहरूलाई आपसमा जोडेर सूचना र स्रोतहरू आदानप्रदान गर्ने प्रक्रिया हो।</p>
+<section class="page-hero">
+<span class="tag">NETWORKING ACADEMY</span>
+<h1>Learn Computer <span>Networking</span></h1>
+<p>Understand how devices communicate around the world.</p>
 </section>
 
-<section>
-<h2>2. Types of Networks</h2>
-<p><b>LAN:</b> Local Area Network। सानो क्षेत्रभित्र प्रयोग हुने नेटवर्क।</p>
-<p><b>MAN:</b> Metropolitan Area Network। सहर वा ठूलो क्षेत्र समेट्ने नेटवर्क।</p>
-<p><b>WAN:</b> Wide Area Network। ठूलो भौगोलिक क्षेत्र जोड्ने नेटवर्क।</p>
-</section>
+<main class="section">
 
-<section>
-<h2>3. IP Address</h2>
-<p>IP Address नेटवर्कमा कुनै उपकरण पहिचान गर्न प्रयोग हुने डिजिटल ठेगाना हो।</p>
-<p>IPv4 र IPv6 IP Address का दुई प्रमुख संस्करण हुन्।</p>
-</section>
+<div class="content-panel">
+<h2>01. Introduction to Networking</h2>
+<p>Computer networking is the connection of two or more
+computing devices to exchange data and share resources.</p>
+<h3>Benefits of Networking</h3>
+<ul>
+<li>Sharing files and information</li>
+<li>Sharing printers and resources</li>
+<li>Communication between devices</li>
+<li>Internet connectivity</li>
+<li>Centralized administration</li>
+</ul>
+</div>
 
-<section>
-<h2>4. Networking Devices</h2>
-<p>Router, Switch, Modem, Hub, Access Point र Network Interface Card नेटवर्कमा प्रयोग हुने उपकरणहरू हुन्।</p>
-</section>
+<div class="content-panel">
+<h2>02. Types of Networks</h2>
+<h3>LAN – Local Area Network</h3>
+<p>Connects devices in a small area such as a home, school or office.</p>
+<h3>MAN – Metropolitan Area Network</h3>
+<p>Connects networks across a city or metropolitan area.</p>
+<h3>WAN – Wide Area Network</h3>
+<p>Connects networks across large geographical distances.</p>
+<h3>PAN – Personal Area Network</h3>
+<p>Connects personal devices over a short distance.</p>
+</div>
 
-<section>
-<h2>5. Networking Protocols</h2>
-<p>HTTP, HTTPS, TCP, UDP, DNS, DHCP र FTP नेटवर्कमा प्रयोग हुने प्रमुख Protocol हरू हुन्।</p>
-</section>
+<div class="content-panel">
+<h2>03. IP Address</h2>
+<p>An Internet Protocol address identifies a device on an IP network.</p>
+<h3>IPv4 Example</h3>
+<pre>192.168.1.10</pre>
+<h3>IPv6 Example</h3>
+<pre>2001:db8::1</pre>
+<p>Private IPv4 address ranges include 10.0.0.0/8,
+172.16.0.0/12 and 192.168.0.0/16.</p>
+</div>
 
-<section>
-<h2>6. OSI Model</h2>
-<p>OSI Model मा सात तह हुन्छन्:</p>
-<p>1. Physical</p>
-<p>2. Data Link</p>
-<p>3. Network</p>
-<p>4. Transport</p>
-<p>5. Session</p>
-<p>6. Presentation</p>
-<p>7. Application</p>
-</section>
+<div class="content-panel">
+<h2>04. Networking Devices</h2>
+<h3>Router</h3>
+<p>Forwards packets between different networks.</p>
+<h3>Switch</h3>
+<p>Connects devices within a local network.</p>
+<h3>Modem</h3>
+<p>Provides a connection to an internet service provider.</p>
+<h3>Firewall</h3>
+<p>Filters network traffic according to security rules.</p>
+</div>
+
+<div class="content-panel">
+<h2>05. Important Protocols</h2>
+<ul>
+<li>TCP – Reliable transport communication.</li>
+<li>UDP – Connectionless transport communication.</li>
+<li>HTTP – Web communication protocol.</li>
+<li>HTTPS – Encrypted web communication.</li>
+<li>DNS – Converts domain names into IP addresses.</li>
+<li>DHCP – Automatically assigns network configuration.</li>
+</ul>
+</div>
+
+<div class="content-panel">
+<h2>06. OSI Model</h2>
+<ol>
+<li>Physical Layer</li>
+<li>Data Link Layer</li>
+<li>Network Layer</li>
+<li>Transport Layer</li>
+<li>Session Layer</li>
+<li>Presentation Layer</li>
+<li>Application Layer</li>
+</ol>
+<p>The OSI model helps explain how network communication
+functions through seven conceptual layers.</p>
+</div>
+
+<div class="content-panel">
+<h2>07. Network Safety</h2>
+<ul>
+<li>Use secure Wi-Fi configurations.</li>
+<li>Update router firmware.</li>
+<li>Use strong administrator passwords.</li>
+<li>Enable appropriate firewall settings.</li>
+<li>Monitor network activity responsibly.</li>
+</ul>
+</div>
+
+<div class="content-panel" id="quiz">
+<h2>Networking Knowledge Quiz</h2>
+<p>Choose the correct answer.</p>
+
+<div class="quiz-question">
+<h3>1. What does LAN stand for?</h3>
+<label><input type="radio" name="q1" value="0"> Large Area Network</label>
+<label><input type="radio" name="q1" value="1"> Local Area Network</label>
+<label><input type="radio" name="q1" value="0"> Long Access Network</label>
+</div>
+
+<div class="quiz-question">
+<h3>2. Which device connects different networks?</h3>
+<label><input type="radio" name="q2" value="1"> Router</label>
+<label><input type="radio" name="q2" value="0"> Keyboard</label>
+<label><input type="radio" name="q2" value="0"> Monitor</label>
+</div>
+
+<div class="quiz-question">
+<h3>3. Which protocol resolves domain names?</h3>
+<label><input type="radio" name="q3" value="1"> DNS</label>
+<label><input type="radio" name="q3" value="0"> FTP</label>
+<label><input type="radio" name="q3" value="0"> HDMI</label>
+</div>
+
+<button class="btn" onclick="checkQuiz(['q1','q2','q3'],3)">
+Submit Quiz
+</button>
+<p id="quizResult"></p>
+</div>
+
 </main>
 
-<footer>
-<p>© 2026 Aayush Cyber Security</p>
-<p>Developed by Aayush Jaishi</p>
+<footer class="footer">
+<h3>CYBER ACADEMY</h3>
+<p>© 2026 Networking Academy</p>
 </footer>
+
 </body>
 </html>
