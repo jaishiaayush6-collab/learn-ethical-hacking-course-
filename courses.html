@@ -1,224 +1,93 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Our Courses | Learn Ethical Hacking Course</title>
-
-    <link rel="stylesheet" href="../css/style.css">
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #080d12;
-            color: white;
-        }
-
-        header {
-            background: #101820;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00ff88;
-        }
-
-        header h1 {
-            color: #00ff88;
-        }
-
-        nav a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            margin: 8px;
-        }
-
-        nav a:hover {
-            color: #00ff88;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 55px 20px;
-            background: linear-gradient(135deg, #101820, #003b2b);
-        }
-
-        .hero h2 {
-            color: #00ff88;
-            font-size: 32px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-        }
-
-        .course-card {
-            background: #111c25;
-            padding: 25px;
-            border: 1px solid #263a42;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .course-card:hover {
-            border-color: #00ff88;
-            transform: translateY(-5px);
-        }
-
-        .course-card h3 {
-            color: #00ff88;
-        }
-
-        .course-card p {
-            line-height: 1.7;
-            color: #ddd;
-        }
-
-        .course-btn {
-            display: inline-block;
-            background: #00ff88;
-            color: #00150c;
-            padding: 10px 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .course-btn:hover {
-            background: white;
-        }
-
-        footer {
-            background: #101820;
-            text-align: center;
-            padding: 20px;
-            color: #aaa;
-            margin-top: 30px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses | Aayush Cyber Security</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#07111f;color:white;transition:.3s}
+header{background:#0d2035;padding:20px;text-align:center}
+header h1{color:#00ff99}
+nav{background:#102b43;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:10px;display:inline-block}
+.container{max-width:1100px;margin:auto;padding:30px 15px}
+h2{text-align:center;color:#00ff99;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:#10243a;padding:25px;border-radius:12px;border:1px solid #00ff99}
+.card h3{color:#00ff99;margin-bottom:12px}
+.card p{line-height:1.7}
+.card a{display:inline-block;margin-top:15px;background:#00cc88;color:#001;padding:10px 18px;text-decoration:none;border-radius:5px}
+button{padding:10px 15px;border:0;border-radius:5px;cursor:pointer}
+footer{text-align:center;padding:25px;background:#0d2035;margin-top:30px}
+.light{background:#f1f5f9;color:#172033}
+.light header,.light nav,.light footer{background:#dce7f2}
+.light nav a{color:#172033}
+.light .card{background:white;color:#172033}
+</style>
 </head>
-
 <body>
+<header>
+<h1>🛡 AAYUSH CYBER SECURITY</h1>
+<p>Learn • Practice • Protect</p>
+</header>
 
-    <!-- Header -->
-    <header>
-        <h1>LEARN ETHICAL HACKING COURSE</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="networking.html">Networking</a>
+<a href="linux.html">Linux</a>
+<a href="web-security.html">Web Security</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<div class="container">
+<button onclick="document.body.classList.toggle('light')">🌙 / ☀️ Theme</button>
+<h2>Our Cyber Security Courses</h2>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Our Courses</h2>
+<div class="grid">
+<div class="card">
+<h3>01. Computer Fundamentals</h3>
+<p>Computer basics, hardware, software, operating systems र digital technology सिक्नुहोस्।</p>
+<a href="computer.html">Learn More</a>
+</div>
 
-        <p>
-            नेपाली भाषामा Cyber Security र Ethical Hacking सिक्नुहोस्।
-        </p>
-    </section>
+<div class="card">
+<h3>02. Networking</h3>
+<p>IP Address, DNS, TCP/IP, Router, Switch र Network Security को आधारभूत ज्ञान।</p>
+<a href="networking.html">Learn More</a>
+</div>
 
-    <!-- Courses Section -->
-    <section class="container">
+<div class="card">
+<h3>03. Linux</h3>
+<p>Linux Operating System, Terminal, File Management र Command Line सिक्नुहोस्।</p>
+<a href="linux.html">Learn More</a>
+</div>
 
-        <h2>हाम्रा कोर्सहरू</h2>
+<div class="card">
+<h3>04. Web Security</h3>
+<p>Website Security, HTTPS, Authentication र सुरक्षित Web Development।</p>
+<a href="web-security.html">Learn More</a>
+</div>
 
-        <div class="course-grid">
+<div class="card">
+<h3>05. Ethical Hacking</h3>
+<p>कानुनी अनुमति लिएर Security Testing र Vulnerability Awareness सिक्नुहोस्।</p>
+<a href="web-security.html">Learn More</a>
+</div>
 
-            <!-- Course 1 -->
-            <div class="course-card">
-                <h3>01. Ethical Hacking</h3>
+<div class="card">
+<h3>06. Digital Safety</h3>
+<p>Password Safety, Phishing Awareness र Online Privacy सम्बन्धी ज्ञान।</p>
+<a href="web-security.html">Learn More</a>
+</div>
+</div>
+</div>
 
-                <p>
-                    Ethical Hacking को परिचय, सुरक्षा परीक्षणका
-                    आधारभूत सिद्धान्त र अनुमति प्राप्त Lab मा
-                    अभ्यास गर्न सिक्नुहोस्।
-                </p>
-
-                <a href="ethical-hacking.html" class="course-btn">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Course 2 -->
-            <div class="course-card">
-                <h3>02. Networking Basics</h3>
-
-                <p>
-                    IP Address, DNS, Router, Server र Computer
-                    Network का आधारभूत कुराहरू सिक्नुहोस्।
-                </p>
-
-                <a href="networking.html" class="course-btn">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Course 3 -->
-            <div class="course-card">
-                <h3>03. Linux Basics</h3>
-
-                <p>
-                    Linux Operating System, Terminal र
-                    आधारभूत Linux Commands प्रयोग गर्न सिक्नुहोस्।
-                </p>
-
-                <a href="linux.html" class="course-btn">
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Course 4 -->
-            <div class="course-card">
-                <h3>04. Web Security</h3>
-
-                <p>
-                    Website Security, सुरक्षित Coding र
-                    सामान्य Web Vulnerabilities बारे सिक्नुहोस्।
-                </p>
-
-                <a href="web-security.html" class="course-btn">
-                    Learn More
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="container">
-        <h2>हाम्रो Course किन सिक्ने?</h2>
-
-        <ul>
-            <li>नेपाली भाषामा सजिलो शिक्षा।</li>
-            <li>Beginner बाट सुरु हुने पाठहरू।</li>
-            <li>व्यावहारिक र सुरक्षित Lab अभ्यास।</li>
-            <li>Cyber Security को आधारभूत ज्ञान।</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 LEARN ETHICAL HACKING COURSE</p>
-        <p>Learn Cyber Security | Stay Safe Online</p>
-    </footer>
-
+<footer>
+<p>© 2026 Aayush Cyber Security</p>
+<p>Developed by Aayush Jaishi</p>
+</footer>
 </body>
 </html>
